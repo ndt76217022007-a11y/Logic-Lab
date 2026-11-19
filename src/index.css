@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0f1221;
+  --color-panel: #161a2e;
+  --color-edge: #262c4a;
+  --color-glow-amber: #ffc94a;
+  --color-glow-cyan: #4de8ff;
+  --color-glow-red: #ff4d5e;
+  --font-mono: "JetBrains Mono", "VT323", ui-monospace, Consolas, monospace;
+  --font-pixel: "VT323", ui-monospace, monospace;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: var(--color-ink);
+  color: #c9d1ff;
+  font-family: var(--font-mono);
+  overflow: hidden;
+}
+
+.btn {
+  @apply rounded border border-edge bg-[#1c2140] px-2.5 py-1 font-mono text-xs text-slate-200 transition-colors hover:border-[#4a5488] hover:bg-[#232a52] disabled:cursor-not-allowed disabled:opacity-40;
+}
+.btn-on {
+  @apply border-glow-amber text-glow-amber;
+}
+.btn-primary {
+  @apply rounded border-2 border-glow-amber bg-[#2a2410] px-3 py-1.5 font-pixel text-lg tracking-wider text-glow-amber shadow-[0_0_14px_rgba(255,201,74,0.35)] hover:bg-[#3a3216];
+}
+.scroll-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: #262c4a;
+  border-radius: 3px;
+}
